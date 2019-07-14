@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Recommendatio</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Video Request Page</h1>
+            <a type="button" class="btn btn-primary" href="{% url 'vrform' %}">Enter Video</a>
+        </div>
+
+        {% for v in video %}
+        <div class="jumbotron">
+            <h2>{{ v.videotitle }}</h2>
+            <p class="well">{{ v.videodesc }}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+    
+    
+</body>
+</html>
