@@ -1,9 +1,10 @@
 from django import forms
 
-class TodoForm():
-    text = forms.CharField(
+class TodoForm(forms.Form):
+    texttodo = forms.CharField(
         max_length=50,
-        widget=forms.TextInput(attrs={
-            'class': 'form-control form-group',
-            'placeholder': 'A Django TODO List',
+        widget= forms.TextInput(
+            attrs={
+            'class': 'form-control',
+            'placeholder': 'A Django TODO List'
         }))

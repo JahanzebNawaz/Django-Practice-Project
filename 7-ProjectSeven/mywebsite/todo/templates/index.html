@@ -16,17 +16,33 @@
                     <h1>TO-DO APP</h1>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control form-group" placeholder="To Do List">
-                            <input type="submit" class="btn btn-primary " value="ADD">
+                   <form action="{% url 'add' %}" method="POST">
+                    {% csrf_token %}
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                {{form.texttodo}}
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </div>
                         </div>
-                    </div>
-                    <input type="submit" class="btn btn-outline-success btn-block" value="Assignment">
-                    <input type="submit" class="btn btn-outline-danger btn-block" value="Delete">
+                   </form>
+                   <a href="{% url 'delete' %}" class="btn btn-outline-success btn-block"> DELETE </a>
+                    {% comment %} <input type="submit" class="btn btn-outline-success btn-block" value="Assignment"> {% endcomment %}
+                    {% comment %} <input type="submit" class="btn btn-outline-danger btn-block" value="Assignment"> {% endcomment %}
                     <hr>
                     <div class="form-group text-left">
-                        <p class="alert alert-info">Welcome</p>
+                        <ul class="list-group">
+                        {% for l in mytodo %}
+                            {% if l.complete %}
+                                <li class="list-group-item todo-completed">{{ l.todotext  }}</li>
+                            {% else %}
+                                <a href="{% url 'complete' l.id %}" ><li class="list-group-item ">{{ l.todotext  }}</li></a>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                        
+                        
+                        
                     </div>
 
                 </div>
