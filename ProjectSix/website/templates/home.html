@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% for data in object_list %}
+<div class="article">
+    <h3><a href="{% url 'article_page' data.pk %}">{{ data.title }}</a></h3>
+    <p class="lead">{{ data.text }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}
