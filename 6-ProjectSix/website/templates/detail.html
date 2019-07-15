@@ -5,4 +5,6 @@
         <h2>{{batman.title}}</h2>
         <p>{{batman.text}}</p>
     </div>
+    <a href="{% url 'article_edit' batman.pk %}" class="btn btn-success">Update</a>
+    <a href="{% url 'article_delete' batman.pk %}" class="btn btn-danger">Delete</a>
 {% endblock %}

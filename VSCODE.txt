@@ -1,0 +1,33 @@
+{
+    "liveServer.settings.donotShowInfoMsg": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.fontSize": 11,
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "workbench.colorTheme": "Monokai",
+    "window.zoomLevel": 1,
+    "editor.renderWhitespace": "all",
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {        
+        "cpp": "cd $dir && g++ -std=c++14 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    },
+    "editor.renderControlCharacters": true,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "terminal.integrated.rendererType": "dom",
+    "git.confirmSync": false,
+    "browserRefresh.focus": true,
+    "browserRefresh.browser": "Firefox Web Browser",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "update.mode": "manual",
+    
+    
+}
+
+
+
