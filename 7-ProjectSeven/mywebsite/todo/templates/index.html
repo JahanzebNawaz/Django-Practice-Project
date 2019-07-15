@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do Application</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <section class="container">
+        <div class="jumbotron m-1 ">
+            <div class="card w-50 mx-auto text-center">
+                <div class="card-head p-2 bg-primary">
+                    <h1>TO-DO APP</h1>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-group" placeholder="To Do List">
+                            <input type="submit" class="btn btn-primary " value="ADD">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-outline-success btn-block" value="Assignment">
+                    <input type="submit" class="btn btn-outline-danger btn-block" value="Delete">
+                    <hr>
+                    <div class="form-group text-left">
+                        <p class="alert alert-info">Welcome</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
