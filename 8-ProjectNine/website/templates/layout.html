@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Blog Website With Django</title>
+
+</head>
+
+<body>
+    <header class="container m-2  bg-light">
+        
+        <div class="jumbotron">
+            <h1><a href="/">Personal Blog</a></h1>
+            <div class="container">
+                {% if user.is_authenticated %}
+                <p class="alert alert-info">You are logged In. Mr {{ user.username }}</p>
+                <p><a href="{% url 'logout' %}" class="btn btn-danger">Logout</a></p>
+                
+               
+
+                {% else %}
+                <p class="alert alert-danger">Not Logged In. <a href="{% url 'login' %}" class="btn btn-primary">Login</a></p>
+                {% endif %}
+            </div>
+
+            <section class="container">
+                {% block content  %}
+                {% endblock %}
+            </section>
+            
+        </div>
+
+    </header>
+   
+
+
+</body>
+
+</html>

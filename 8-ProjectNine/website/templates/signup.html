@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="card  mx-auto">
+        <div class="card-body text-left">
+            <h3>Signup Page </h3>
+            <form method="POST">
+                {% csrf_token %}
+            
+                {{form.as_p}}
+                <button type="submit" class="btn btn-success btn-block">Signup</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
